@@ -38,9 +38,7 @@ foreach ($line as $Result) {
     fputcsv($output_handle, $Result, ';', '"');
 }
 
-// Close output file stream
 $result_csv = ob_get_contents();
-// Já podemos encerrar o buffer e limpar tudo que há nele
 ob_end_clean();
 fclose($output_handle);
 
